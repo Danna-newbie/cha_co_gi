@@ -54,15 +54,14 @@ function startFloatingMemories() {
 
 
 
-const letterContent = `Chào bạn Trang,
+const letterContent = `Chào cậu :))
 
-Chúc mừng sinh nhật cậu nhé! Chúc cậu bước sang tuổi mới luôn rạng rỡ, vui vẻ và gặp thật nhiều may mắn.<br><br>
+Lúc làm cái này là tui đi stalk bạn dữ lắm, cố lục một đống ảnh dìm để có cái vui vui 😛. nhưng khom chả tìm thấy gì cả, mong là tui với bạn có nhiều kỉ niệm hơn để tui có thể dễ dàng tìm ra ảnh dìm của bạn<br><br>
 
-Mình để ý thấy cậu luôn cố gắng rất nhiều trong việc học, nên mình tin tuổi mới này sẽ là lúc cậu gặt hái được những thành quả xứng đáng. Hãy luôn giữ nụ cười lạc quan đó nhé, vì nó truyền năng lượng tích cực cho mọi người xung quanh lắm đấy.<br><br>
+Chúc ngdep tuổi mới thật vui vẻ, càng ngày càng dễ thương, xinh gái và yêu bản thân nhiều hơn, hạn chế thức khuya nựa. Đạt được mục tiêu của bản thân và gặt hái nhiều thành công nheee<br>
+<div style="opacity: 0.6; color: #555;"> Và đặc biệt là cao hơn tui nha<div> <br><br> 
 
-Chúc cậu một ngày sinh nhật thật ấm áp và hạnh phúc!<br><br>
-
-Happy Birthday`;
+Happy birthday bạn Trang 04/02🎂`;
 
 
 function typeLetter() {
