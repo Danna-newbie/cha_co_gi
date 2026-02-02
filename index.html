@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng sinh nhật bạn Trang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script:wght@700&family=Patrick+Hand&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+    <div class="petals-container" id="petals"></div>
+
+    <div class="scene" id="scene0">
+        <div class="gift-box-intro" onclick="startSurprise()">🎁</div>
+        <h2 style="font-family: 'Dancing Script';">Bất ngờ tặng bạn nè</h2>
+        <p>Nhấn đi bà</p>
+    </div>
+
+    <div class="scene hidden transition-scene" id="transition1">
+        <div class="transition-content">
+            <div class="transition-icon">🎉</div>
+            <h2 class="transition-text">Chuẩn bị...</h2>
+        </div>
+    </div>
+
+    <div class="scene hidden" id="scene1">
+        <h1 class="birthday-title">
+            Chúc mừng<br>sinh nhật
+        </h1>
+        <button class="btn-premium" onclick="nextScene(1, 2)">Cùng nhau nhìn lại nhaa</button>
+    </div>
+
+    <div class="scene hidden transition-scene" id="transition2">
+        <div class="transition-content">
+            <div class="transition-icon">📸</div>
+            <h2 class="transition-text">Những khoảnh khắc đáng nhớ...</h2>
+        </div>
+    </div>
+
+    <div class="scene hidden" id="scene2">
+        <h2 style="font-family: 'ChristmasDream'; font-size: 4em; margin-bottom: 20px;">Ú ÒA</h2>
+        <div class="floating-memories-container" id="floatingMemories"></div>
+        <div class="photo-counter" id="photoCounter"></div>
+
+        
+        <div class="gallery-wrapper">
+            <div class="polaroid-base gallery-polaroid active" id="galleryCard">
+                <img id="galleryImg" src="" alt="Khoang khac dang nho">
+                <span id="galleryCaption">Loading...</span>
+            </div>
+        </div>
+
+        <button id="btnWish" class="btn-premium" style="opacity: 0; pointer-events: none;" onclick="nextScene(2, 3)">Make a wish</button>
+    </div>
+
+    <div class="scene hidden transition-scene" id="transition3">
+        <div class="transition-content">
+            <div class="transition-icon">🎂</div>
+            <h2 class="transition-text">Đến lúc thổi nến rồi...</h2>
+        </div>
+    </div>
+
+    <div class="scene hidden" id="scene3">
+    <h1 class="wish-title">✨ƯỚC✨</h1>
+    <div class="cake" onclick="blowCandles()">
+        <div class="candle-container">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+        </div>
+    </div>
+    <p style="margin-top: 50px; opacity: 0.8; font-size: 1.1em; color: #ffd700;">(nhấn vào bánh để thổi nến nha)</p>
+</div>
+
+    <div class="scene hidden transition-scene" id="transition4">
+        <div class="transition-content">
+            <div class="transition-icon">💌</div>
+            <h2 class="transition-text">Một lời nhắn dành cho bạn...</h2>
+        </div>
+    </div>
+
+    <div class="scene hidden" id="scene4">
+        <div class="letter-paper">
+            <div id="letterText"></div>
+        </div>
+        <button id="btnLetter" class="btn-premium" style="opacity: 0; pointer-events: none;" onclick="nextScene(4, 5)">Chưa hết đâuu</button>
+    </div>
+
+    <div class="scene hidden transition-scene" id="transition5">
+        <div class="transition-content">
+            <div class="transition-icon">🎁</div>
+            <h2 class="transition-text">Còn một điều bất ngờ nữa...</h2>
+        </div>
+    </div>
+
+    <div class="scene hidden" id="scene5">
+        <div class="sparkles-container" id="sparkles"></div>
+        
+        <div class="final-scene-content">
+            <h1 class="mystery-title">Món quà siêu đặc biệt🎁</h1>
+            <p class="mystery-subtitle">Lắng nghe nhịp đập con tym</p>
+            
+            <div id="mysteryContainer">
+                <div class="heart-container" id="heartContainer" onclick="unlockHeart()">
+                    <div class="locked-heart">❤️</div>
+                    <div class="lock-icon" id="lockIcon">🔒</div>
+                </div>
+                <p class="click-counter" id="clickCounter">Nhấn 3 lần để mở cửa trái tym</p>
+            </div>
+
+            <div class="reveal-box" id="revealBox">
+                <div class="reveal-icon">🎁</div>
+                <h2 class="reveal-title">Phần thưởng cho người kiên trì😋</h2>
+                <p class="reveal-message">
+                    Giấu hàng nóng đến tận đây :3
+                </p>
+                <div class="reveal-hint" id="giftLocation" style="display:none;"></div>
+                
+                <button class="btn-premium" style="margin-top: 30px;" onclick="nextScene(5, '5-5')">Làm tí gamble nè 🎰</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="scene hidden transition-scene" id="transition5-5">
+        <div class="transition-content">
+            <div class="transition-icon">🎰</div>
+            <h2 class="transition-text">Chọn một món quà thôi nào...</h2>
+        </div>
+    </div>
+
+    <div class="scene hidden" id="scene5-5">
+        <div class="sparkles-container" id="lotterySparkles"></div>
+        
+        <div class="final-scene-content">
+            <h1 class="lottery-title">Gacha bất diệt🔥</h1>
+           
+            
+            <div id="giftBoxesContainer" class="gift-boxes-container">
+                <div class="gift-box" onclick="selectGift(0)">🎁</div>
+                <div class="gift-box" onclick="selectGift(1)">🎁</div>   
+                <div class="gift-box" onclick="selectGift(2)">🎁</div>
+                <div class="gift-box" onclick="selectGift(3)">🎁</div>
+                <div class="gift-box" onclick="selectGift(4)">🎁</div>
+            </div>
+
+            <div class="gift-result" id="giftResult">
+                <div class="gift-emoji" id="giftEmoji"></div>
+                <h2 class="gift-name" id="giftName"></h2>
+                <p class="gift-description" id="giftDescription"></p>
+                <button class="btn-premium" style="margin-top: 30px;" onclick="nextScene('5-5', 6)">Tu bi o tình iu</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="scene hidden transition-scene" id="transition6">
+        <div class="transition-content">
+            <div class="transition-icon">🌙</div>
+            <h2 class="transition-text">Và cuối cùng...</h2>
+        </div>
+    </div>
+
+    <div class="scene hidden" id="scene6">
+        <div class="moon"></div>
+        <div class="fireworks-container" id="fireworks"></div>
+        
+        
+        <div class="final-scene-content">
+            <h1 class="final-title">Điều cuối cùng tui muốn nói :3</h1>
+            <div class="polaroid-base final-polaroid">
+                <img src="Picture/ban_Chang.jpg" alt="ban Trang de thuong">
+               <span>
+        <a href="https://drive.google.com/file/d/1WiID_pqoaQ5mRRIrKyU_NoLihR9I1J4_/view?usp=sharing" target="_blank" class="caption-link">
+            Chúc bạn fix bug thành công ❤️‍🔥
+        </a>
+            </div>
+            <button class="btn-premium" onclick="location.reload()">Xem lại</button>
+        </div>
+
+        <div class="music-player">
+            <button class="music-player-btn" onclick="toggleMusic()" id="playBtn">▶️</button>
+            <div class="music-info">
+                <p class="music-title">Happy birthday 🎂 </p>
+                <p class="music-artist">Cho xin con beat</p>
+            </div>
+            <div class="sound-wave paused" id="soundWave">
+                <div class="sound-bar"></div>
+                <div class="sound-bar"></div>
+                <div class="sound-bar"></div>
+                <div class="sound-bar"></div>
+            </div>
+        </div>
+        
+        <audio id="bgMusic" loop preload="auto">
+            <source src="happy-birthday-469282.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
