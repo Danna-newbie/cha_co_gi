@@ -56,10 +56,10 @@ function startFloatingMemories() {
 
 const letterContent = `Chào cậu :))
 
-Lúc làm cái này là tui đi stalk bạn dữ lắm, cố lục một đống ảnh dìm để có cái vui vui 😛. Hơi tiếc là tui hum tìm thấy gì cả, mong là tui với bạn có nhiều kỉ niệm hơn để tui có thể dễ dàng tìm ra ảnh dìm của bạn<br><br>
+Lúc làm cái này là tui đi stalk bạn dữ lắm, cố lục một đống ảnh dìm để có cái vui vui 😛. Hơi tiếc là tui hum tìm thấy gì cả, mong là tui với bạn có nhiều kỉ niệm hơn để tui có thể dễ dàng tìm ra ảnh dìm của bạn.<br><br>
 
-Chúc ngdep tuổi mới thật vui vẻ, càng ngày càng dễ thương, xinh gái và yêu bản thân nhiều hơn, hạn chế thức khuya nựa. Đạt được mục tiêu của bản thân và gặt hái nhiều thành công nheee<br>
-Và đặc biệt là cao hơn tui nha <br><br>
+Chúc ngdep tuổi mới thật vui vẻ, càng ngày càng dễ thương, xinh gái và yêu bản thân nhiều hơn, hạn chế thức khuya nựa. Đạt được mục tiêu của bản thân và gặt hái nhiều thành công nheee.<br>
+Và đặc biệt là cao hơn tui nha. <br><br>
 
 Happy birthday bạn Trang 04/02🎂`;
 
