@@ -448,12 +448,14 @@ h1 {
     position: relative;
     font-family: 'Patrick Hand', cursive; 
     font-size: clamp(1.3em, 4vw, 1.6em); 
-    line-height: 2em; 
+    line-height: 2rem; 
     text-align: left;
     background-image: linear-gradient(#99c0ff 1px, transparent 1px);
-    background-size: 100% 2em;
+    background-size: 100% 2rem;
     background-position: 0 1.9em;
     border-radius: 4px;
+    background-attachment: local;
+    padding-top: 2rem;
 }
 
 .letter-paper::after {
@@ -464,6 +466,7 @@ h1 {
     font-size: 3em;
     transform: rotate(15deg);
     opacity: 0.8;
+    pointer-events: none;
 }
 
 
@@ -1167,4 +1170,3 @@ h1 {
     font-family: "Neon80s";
     src: url("font/Neon80s.ttf") format('opentype');
 }
-
